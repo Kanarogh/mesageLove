@@ -43,7 +43,7 @@ body {
     margin-bottom: 20px;
 }
 
-h1 {
+h3 {
     font-family: 'Pacifico', cursive;
     color: var(--cor-destaque);
     font-size: 2.5em;
@@ -210,7 +210,7 @@ h1 {
     }
 
     /* Diminui a fonte do título principal */
-    h1 {
+    h3 {
         font-size: 2em;
     }
 
