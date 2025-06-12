@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <audio id="musica-fundo" src="yung kai - blue.mp3" loop></audio>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="anim-bottom-to-top">Feliz dia dos namorados ❤️</h1>
+
+        </div>
+
+        <div class="swiper anim-bottom-to-top">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="foto1.jpg" alt="Nossa Foto 1"></div>
+                <div class="swiper-slide"><img src="foto2.jpg" alt="Nossa Foto 2"></div>
+                <div class="swiper-slide"><img src="foto3.jpg" alt="Nossa Foto 3"></div>
+                <div class="swiper-slide"><img src="foto4.jpg" alt="Nossa Foto 2"></div>
+                <div class="swiper-slide"><img src="foto5.jpg" alt="Nossa Foto 3"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div id="contador" class="anim-left-to-right">
+            <div class="tempo-card">
+                <span id="dias" class="numero">0</span>
+                <span class="label">Dias</span>
+            </div>
+            <div class="tempo-card">
+                <span id="horas" class="numero">0</span>
+                <span class="label">Horas</span>
+            </div>
+            <div class="tempo-card">
+                <span id="minutos" class="numero">0</span>
+                <span class="label">Minutos</span>
+            </div>
+            <div class="tempo-card">
+                <span id="segundos" class="numero">0</span>
+                <span class="label">Segundos</span>
+            </div>
+        </div>
+        <div class="play-container">
+            <button id="play-pause-btn" class="anim-bottom-to-top">
+                <i class="fas fa-play"></i>
+            </button>
+        </div>
+        <p class="frase-final anim-right-to-left">
+            Dizem que o tempo voa quando estamos felizes, e com você eu entendi o que isso significa. Obrigado por ser o
+            meu melhor momento, todos os dias. Te amo!
+        </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
