@@ -192,3 +192,56 @@ h1 {
     animation: slideInFromRight 0.8s ease-out 0.6s forwards;
     opacity: 0;
 }
+
+/* ======================================================= */
+/* --- NOVO: Ajustes para Telas Pequenas (Mobile) --- */
+/* ======================================================= */
+@media (max-width: 768px) {
+
+    /* Ajusta o padding do container principal para dar mais espaço */
+    .container {
+        padding: 20px 15px;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+        border: none;
+        min-height: 100vh;
+        box-shadow: none;
+    }
+
+    /* Diminui a fonte do título principal */
+    h1 {
+        font-size: 2em;
+    }
+
+    /* Diminui a altura do carrossel para não ocupar a tela toda */
+    .swiper {
+        height: 350px;
+    }
+
+    /* Faz os cards do contador quebrarem a linha e ocuparem mais espaço */
+    #contador {
+        flex-wrap: wrap;
+        /* Permite que os itens quebrem a linha */
+        gap: 15px;
+        /* Aumenta o espaço entre os cards */
+    }
+
+    .tempo-card {
+        width: 45%;
+        /* Cada card ocupa quase metade da largura para ficar 2x2 */
+        padding: 10px 5px;
+    }
+
+    /* Diminui a fonte dos números do contador */
+    .tempo-card .numero {
+        font-size: 1.8em;
+    }
+
+    /* Diminui o tamanho do botão de play */
+    #play-pause-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1em;
+    }
+}
