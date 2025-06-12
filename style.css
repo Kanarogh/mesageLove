@@ -221,7 +221,7 @@ h3 {
     }
 
     .tempo-card {
-        width: auto;
+        width: max-content;
         /* Deixa a largura ser automática */
         padding: 8px;
         /* Diminui o padding interno */
