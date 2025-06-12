@@ -210,23 +210,20 @@ h3 {
         /* Podemos até diminuir um pouco se quiser */
     }
 
-    /* <<< MUDANÇA 2: Ajustes no contador para ficar em linha única */
+    /* NOVAS REGRAS (DENTRO DO @MEDIA) - COPIE E COLE NO LUGAR DAS ANTIGAS */
     #contador {
+        display: flex;
+        justify-content: space-between;
+        /* <<< MUDANÇA PRINCIPAL */
         flex-wrap: nowrap;
-        /* Força os itens a ficarem em uma linha */
-        gap: 8px;
-        /* Diminui o espaço entre os cards */
-        justify-content: center;
-        /* Centraliza o conjunto de cards */
+        /* Removemos o 'gap' para máxima compatibilidade */
     }
 
     .tempo-card {
-        flex-grow: 1;
-        /* <<< Permite que o card cresça */
-        flex-basis: 0;
-        /* <<< Define a base de tamanho inicial */
-        padding: 8px;
-        /* Mantém o padding interno */
+        width: 24%;
+        /* <<< MUDANÇA PRINCIPAL: Damos uma largura fixa */
+        padding: 8px 5px;
+        /* Ajuste no padding para caber melhor */
     }
 
     .tempo-card .numero {
