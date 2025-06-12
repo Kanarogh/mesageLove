@@ -221,12 +221,12 @@ h3 {
     }
 
     .tempo-card {
-        width: max-content;
-        /* Deixa a largura ser automática */
+        flex-grow: 1;
+        /* <<< Permite que o card cresça */
+        flex-basis: 0;
+        /* <<< Define a base de tamanho inicial */
         padding: 8px;
-        /* Diminui o padding interno */
-        flex-shrink: 0;
-        /* Impede que os cards encolham demais */
+        /* Mantém o padding interno */
     }
 
     .tempo-card .numero {
