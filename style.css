@@ -1,4 +1,4 @@
-/* --- NOVO: Tema Escuro e Estilos Base --- */
+/* --- TEMA ESCURO E ESTILOS BASE --- */
 :root {
     --cor-fundo: #1a1a1a;
     --cor-container: #2a2a2a;
@@ -10,7 +10,6 @@
     --swiper-navigation-size: 30px;
 }
 
-/* <<< MUDANÇA 1: Adicionando o box-sizing universal para corrigir o padding */
 * {
     box-sizing: border-box;
 }
@@ -23,7 +22,6 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    /* <<< MUDANÇA 2: Removendo o padding do body para não conflitar com o container */
     color: var(--cor-texto-principal);
     text-align: center;
     overflow-x: hidden;
@@ -194,37 +192,51 @@ h3 {
 /* ======================================================= */
 @media (max-width: 768px) {
 
+    /* <<< MUDANÇA 1: Simplificando o container para ele ter respiro nas laterais */
     .container {
         padding: 20px 15px;
-        width: 100%;
-        max-width: 100%;
-        border-radius: 0;
-        border: none;
-        min-height: 100vh;
-        box-shadow: none;
+        /* Mantém um padding interno menor */
     }
 
     h3 {
-        font-size: 2em;
+        font-size: 1.8em;
+        /* Diminuí um pouco mais o título */
+        line-height: 1.2;
+        /* Garante que não quebre de forma estranha */
     }
 
-    /* <<< MUDANÇA 3: Aumentando a altura do carrossel no mobile */
     .swiper {
-        height: 450px;
+        height: 400px;
+        /* Podemos até diminuir um pouco se quiser */
     }
 
+    /* <<< MUDANÇA 2: Ajustes no contador para ficar em linha única */
     #contador {
-        flex-wrap: wrap;
-        gap: 15px;
+        flex-wrap: nowrap;
+        /* Força os itens a ficarem em uma linha */
+        gap: 8px;
+        /* Diminui o espaço entre os cards */
+        justify-content: center;
+        /* Centraliza o conjunto de cards */
     }
 
     .tempo-card {
-        width: 45%;
-        padding: 10px 5px;
+        width: auto;
+        /* Deixa a largura ser automática */
+        padding: 8px;
+        /* Diminui o padding interno */
+        flex-shrink: 0;
+        /* Impede que os cards encolham demais */
     }
 
     .tempo-card .numero {
-        font-size: 1.8em;
+        font-size: 1.3em;
+        /* Diminui BASTANTE a fonte dos números */
+    }
+
+    .tempo-card .label {
+        font-size: 0.6em;
+        /* Diminui a fonte do texto (Dias, Horas...) */
     }
 
     #play-pause-btn {
