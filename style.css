@@ -6,9 +6,13 @@
     --cor-texto-secundario: #a0a0a0;
     --cor-destaque: #e91e63;
     --cor-sombra: rgba(0, 0, 0, 0.4);
-
     --swiper-theme-color: var(--cor-destaque);
     --swiper-navigation-size: 30px;
+}
+
+/* <<< MUDANÇA 1: Adicionando o box-sizing universal para corrigir o padding */
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -19,7 +23,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    padding: 20px 0;
+    /* <<< MUDANÇA 2: Removendo o padding do body para não conflitar com o container */
     color: var(--cor-texto-principal);
     text-align: center;
     overflow-x: hidden;
@@ -35,7 +39,6 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* --- NOVO: Header com Título e Botão de Play --- */
 .header {
     display: flex;
     justify-content: center;
@@ -51,7 +54,6 @@ h3 {
     text-shadow: 0 0 10px rgba(233, 30, 99, 0.5);
 }
 
-/* --- NOVO: Botão de Play/Pause --- */
 #play-pause-btn {
     background: transparent;
     border: 2px solid var(--cor-destaque);
@@ -73,14 +75,11 @@ h3 {
     transform: scale(1.1);
 }
 
-/* Container para centralizar o botão de play */
 .play-container {
     text-align: center;
-    /* Alinha o conteúdo (como texto e botões) ao centro */
     margin-top: 20px;
 }
 
-/* Carrossel (sem grandes alterações de estilo) */
 .swiper {
     width: 100%;
     height: 600px;
@@ -101,7 +100,6 @@ h3 {
     object-fit: cover;
 }
 
-/* --- NOVO: Layout do Contador --- */
 #contador {
     display: flex;
     justify-content: space-around;
@@ -134,7 +132,6 @@ h3 {
     font-weight: bold;
 }
 
-/* Frase final */
 .frase-final {
     font-size: 1em;
     font-style: italic;
@@ -142,7 +139,6 @@ h3 {
     color: var(--cor-texto-secundario);
 }
 
-/* Animações (as mesmas de antes) */
 @keyframes slideInFromBottom {
     from {
         opacity: 0;
@@ -194,11 +190,10 @@ h3 {
 }
 
 /* ======================================================= */
-/* --- NOVO: Ajustes para Telas Pequenas (Mobile) --- */
+/* --- AJUSTES PARA TELAS PEQUENAS (MOBILE) --- */
 /* ======================================================= */
 @media (max-width: 768px) {
 
-    /* Ajusta o padding do container principal para dar mais espaço */
     .container {
         padding: 20px 15px;
         width: 100%;
@@ -209,36 +204,29 @@ h3 {
         box-shadow: none;
     }
 
-    /* Diminui a fonte do título principal */
     h3 {
         font-size: 2em;
     }
 
-    /* Diminui a altura do carrossel para não ocupar a tela toda */
+    /* <<< MUDANÇA 3: Aumentando a altura do carrossel no mobile */
     .swiper {
-        height: 350px;
+        height: 450px;
     }
 
-    /* Faz os cards do contador quebrarem a linha e ocuparem mais espaço */
     #contador {
         flex-wrap: wrap;
-        /* Permite que os itens quebrem a linha */
         gap: 15px;
-        /* Aumenta o espaço entre os cards */
     }
 
     .tempo-card {
         width: 45%;
-        /* Cada card ocupa quase metade da largura para ficar 2x2 */
         padding: 10px 5px;
     }
 
-    /* Diminui a fonte dos números do contador */
     .tempo-card .numero {
         font-size: 1.8em;
     }
 
-    /* Diminui o tamanho do botão de play */
     #play-pause-btn {
         width: 45px;
         height: 45px;
